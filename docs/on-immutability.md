@@ -1,7 +1,5 @@
 # On Immutability
 
----
-
 I have been thinking about the concept of immutability in software design. Specifically on how immutability is relative to the perspective of an observer viewing a system. A system is anything that can be interacted with—either to be acted upon or observed. For the purposes of this discussion, I'll limit it to objects as known in the Object-Oriented Paradigm.
 
 Immutability is a characteristic of a system to remain unchanging over time. Classically, an object is considered immutable if its *observed* properties do not change when *acted upon*. Therefore, the two extremes to achieving immutability in objects (or, more generally, software systems) are:
