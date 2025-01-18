@@ -71,6 +71,17 @@ object.getInner().setObject(new Object());
 ```
 Since `TransitivelyModifiableObject` has `DirectlyModifiableObject` as a property, `TransitivelyModifiableObject` is therefore being modified when its inner `DirectlyModifiableObject` is modified. Therefore, `TransitivelyModifiableObject` is also being acted upon, although `DirectlyModifiableObject` is the object being modified.
 
+It's the same idea as modifying a nested multi-dimensional array.
+```java
+int[][] matrix = new int[5][5];
+int[] inner = matrix[2];
+inner[2] = 1;
+```
+
+Although `matrix` is not being modified, its `inner` array is being modified, so it is regarded as being mutated.
+
+Because `matrix` exposes some way to act on its internal property (namely `inner = matrix[2]`), therefore it is being _acted upon_.
+
 <!--- What does it mean to observe properties of an object? -->
 
 
